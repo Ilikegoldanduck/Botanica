@@ -12,6 +12,9 @@ embedded_components {
   "  texture: \"/assets/Imagebin/flowerbook.tilesource\"\n"
   "}\n"
   ""
+  position {
+    y: 30.0
+  }
   scale {
     x: 5.0
     y: 5.0

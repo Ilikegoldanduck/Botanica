@@ -44,9 +44,9 @@ function update(self, dt)
 	end
 	if math.abs(mouse_pos.x - go.get_position(self.item_id).x) <= 30 and math.abs(mouse_pos.y - go.get_position(self.item_id).y + 20) <= 40 then
 		mouseCheck.changeState(1)
-		go.animate(self.circle, "position.y", go.PLAYBACK_ONCE_FORWARD, go.get_position(".").y + 30, go.EASING_INOUTELASTIC, .05)
+		go.animate(self.circle, "position.y", go.PLAYBACK_ONCE_FORWARD, go.get_position(".").y + 60, go.EASING_INOUTELASTIC, .05)
 	else
-		go.animate(self.circle, "position.y", go.PLAYBACK_ONCE_FORWARD, go.get_position(".").y - 30, go.EASING_INOUTELASTIC, .05)
+		go.animate(self.circle, "position.y", go.PLAYBACK_ONCE_FORWARD, go.get_position(".").y, go.EASING_INOUTELASTIC, .05)
 	end
 end
 
@@ -78,29 +78,15 @@ function on_message(self, message_id, message, sender)
 			end
 		else
 			self.selected = true
+			go.animate(".", "euler.z", go.PLAYBACK_ONCE_FORWARD, 5, go.EASING_LINEAR, 0.25, 0, function()
+				go.animate(".", "euler.z", go.PLAYBACK_ONCE_FORWARD, -5, go.EASING_LINEAR, 0.5, 0, function()
+					go.animate(".", "euler.z", go.PLAYBACK_ONCE_FORWARD, 0, go.EASING_LINEAR, 0.25)
+				end)
+			end)
 			timer.delay(1, false, function()
 				self.selected = false
 			end)
 		end
-		--[[		
-			if mouseCheck.getState() == 1.5 then
-			local store = mouseCheck.getStored()
-			mouseCheck.escapeGui()
-			if self.item_id == store[2].path then
-				msg.post("/book#Herbbook", "escape", {1})
-			else
-				msg.post(store[2], "harvested", {1})
-				msg.post("/book#Herbbook", "escape", {1})
-				msg.post("/flower_factory#flowery", "spawn", {go.get_position().x, go.get_position().y, self.id + store[1]})
-				if not flowerInfo.ID(self.id + store[1])[2] then
-					flowerInfo.unlock(self.id + store[1])
-				end
-				go.delete()
-			end
-		else
-			self.selection = factory.create("#selectionfactory", vmath.vector3(go.get_position(self.item_id).x, go.get_position(self.item_id).y - 40, .6), nil, {item_id = msg.url(go.get_id()), flower_id = self.id}, 0)
-		end
-		]]
 	elseif message_id == hash("delete") then
 		self.selection = nil
 	elseif message_id == hash("harvested") then

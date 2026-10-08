@@ -2109,6 +2109,7 @@ nodes {
   texture: "main/bookbutton"
   id: "herbbutton"
   parent: "guibase"
+  layer: "layer4"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
 }
@@ -2215,6 +2216,22 @@ nodes {
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
   visible: false
+}
+nodes {
+  position {
+    x: 960.0
+    y: 540.0
+  }
+  size {
+    x: 1920.0
+    y: 1080.0
+  }
+  type: TYPE_BOX
+  id: "fog"
+  parent: "guibase"
+  layer: "layer3"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
 }
 layers {
   name: "layer"

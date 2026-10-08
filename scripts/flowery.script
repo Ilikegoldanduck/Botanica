@@ -43,7 +43,7 @@ function on_input(self, action_id, action)
 	end
 	
 	if action_id == hash("righty") and action.pressed and mouse_pos.x > 340 and mouse_pos.x < 1580 and mouse_pos.y > 70 and mouse_pos.y < 1000 and mouseCheck.getState() == 0 then
-		local f = factory.create(flfact, vmath.vector3(mouse_pos.x, mouse_pos.y + 25, .5 - mouse_pos.y / 1000), nil, { id = flower_id , seed_time = os.time()}, 1)
+		local f = factory.create(flfact, vmath.vector3(mouse_pos.x, mouse_pos.y, .5 - mouse_pos.y / 1000), nil, { id = flower_id , seed_time = os.time()}, 1)
 		table.insert(flowers, f)
 		flowerInfo.insertGarden({flower_id, mouse_pos, os.time()})
 	end
