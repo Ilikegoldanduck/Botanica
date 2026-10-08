@@ -1,0 +1,16 @@
+Annual Lobelia|Lobelia erinus|A low-growing flower. Colors range from blue to violet.|(Pretty...)|0.1.2
+Snapdragon|Antirrhinum majus|A tall flower with a cone-shaped tip. It consists of mostly warm colors such as red, orange and yellow.|(I like how this flower looks lol)|0.1.3.4
+Dahlia|Dahlia pinnata|Comes in all different types of colors, from white to purple.|(Their petals are so complex...)|0.2.3
+Cornflower|Centaurea cyanus|Usually a weed in cornfields, this royal blue flower has small petals.|(This shade of blue is so beautiful!)|0.1
+Strawflower|Xerochrysum bracteatum|Has a papery texture on the petals. This flower’s colors consist of mostly warm, autumn colors.|(Loves the heat unlike me)|0.2.3
+Gerbera Daisy|Gerbera jamesonii|Native to South Africa, this flower displays mostly autumn colors.|(Not the right Daisy, Mario!)|0.1.2
+Celosia|Celosia argentea var. cristata|The flower is shaped in a fan. Its colors consist of warm colors.|(I’m not a big fan)|0.1.2
+Sweet Allysum|Lobularia maritima|A flower typically grown in clusters, this flower consists of colors ranging from white to purple.|(It’s really small and cute...)|0.1
+Gladiolus|Gladiolus dalenii|This flower has distinct pointed leaves. This species displays only warm colors.|(I like the name, Sword Lilies, better)|0.1.2
+Sunflower|Helianthus annuus|Tall golden flowers that always look towards the sun.|(They look very optimistic)|0.1.2
+Damask Rose|Rosa x Damascena|A pink flower with complex-looking petals and protective thorns.|(So tasty...)|0.1.3
+Wild Lavender|Lavandula angustifolia|A tall-growing flower, it features small, purple petals.|(I like the smell :3)|0.1.3
+Common Dandelion|Taraxacum officinale|A bright yellow flower. Features thin petals|(GET OUT GET OUT GET OUT)|1.5
+Lily of the Valley|Convallaria majalis|A small flower with white, bell-shaped blooms. This flower contains toxic chemicals despite its smell.|(Smells good…)|1.3
+Winter Daphne|Daphne odora|A pinkish flower that blooms early into spring. Contains toxic chemicals.|(...But there's berries)|0.1.4
+Chinese Astilbe|Astilbe chinensis|A water-loving flower that blooms into a shade of pink.|(Reminds me to drink water sometimes)|0.6

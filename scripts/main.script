@@ -1,0 +1,103 @@
+local flowerInfo = require("scripts.flowerInfo")
+local mouseCheck = require("scripts.mouseCheck")
+local seasons = require("scripts.seasons")
+
+local function split(s,delimiter)
+	if s == nil then
+		return {nil}
+	end
+	delimiter = delimiter or '%s'
+	local t={}
+	local i=1
+	for str in string.gmatch(s, '([^'..delimiter..']+)') do
+		t[i] = str
+		i = i + 1
+	end
+	return t
+end
+
+function init(self)
+	local seed = os.time()
+	math.randomseed(seed)
+	msg.post(".", "acquire_input_focus")
+	defos.disable_window_resize()
+	defos.disable_maximize_button()
+	timer.delay(.1, false, function()
+		msg.post("@render:", "resize", { width = 960, height = 540 } )
+	end)
+	local file = sys.load_resource("/assets/flowers.txt")
+	flowerInfo.start()
+	if file then
+		for line in file:gmatch("([^\n]*)\n?") do
+			local flower = split(line, "|")
+			local conditionals = split(flower[5], ".")
+			flowerInfo.create(flower[1], flower[2], {flower[3], flower[4]}, conditionals)
+		end
+	else
+		pprint("failed to read file")
+	end
+	flowerInfo.sort()
+	go.set("#rainshade", "tint.w", 0)
+	go.set("#snowshade", "tint.w", 0)
+	go.set("#rainshade", "scale", vmath.vector3(200, 200, 0))
+	go.set("#snowshade", "scale", vmath.vector3(200, 200, 0))
+end
+
+local changetime = os.time()
+
+local width = 1920
+local height = 1080
+
+function update(self, dt)
+	dt = os.time() - changetime
+	changetime = os.time()
+	if dt > 0 then
+		seasons.addTime(dt)
+	end
+	mouseCheck.reset()
+	local weather = seasons.getWeather()
+	if weather >= 4 and weather <= 6 then
+		go.set("#rainshade", "cursor", 168/224)
+		go.set("#rainshade", "tint.w", (weather - 2) / 10)
+		if weather == 4 then
+			for i = 0, math.random(0, 1), 1 do
+				factory.create("#rainfact", vmath.vector3(math.random(width), math.random(height), .8), nil, nil, 3)
+			end
+		elseif weather == 5 then
+			for i = 0, math.random(2, 3), 1 do
+				factory.create("#rainfact", vmath.vector3(math.random(width), math.random(height), .8), nil, nil, 3)
+			end
+		else
+			for i = 0, math.random(5, 6), 1 do
+				factory.create("#rainfact", vmath.vector3(math.random(width), math.random(height), .8), nil, nil, 3)
+			end
+		end
+	else
+		go.set("#rainshade", "tint.w", 0)
+	end
+	if weather >= 7 and weather <= 9 then
+		go.set("#snowshade", "tint.w", (weather - 5) / 10)
+		if math.random(0, 1) == 0 then
+			if weather == 7 then
+				for i = 0, math.random(0, 1), 1 do
+					factory.create("#snowfact", vmath.vector3(math.random(width), math.random(height), .8), nil, nil, 3)
+				end
+			elseif weather == 8 then
+				for i = 0, math.random(1, 2), 1 do
+					factory.create("#snowfact", vmath.vector3(math.random(width), math.random(height), .8), nil, nil, 3)
+				end
+			else
+				for i = 0, math.random(3, 4), 1 do
+					factory.create("#snowfact", vmath.vector3(math.random(width), math.random(height), .8), nil, nil, 3)
+				end
+			end
+		end
+	else
+		go.set("#snowshade", "tint.w", 0)
+	end
+	if seasons.getSeason() == 4 then
+		go.set("#background", "cursor", 1/2)
+	else
+		go.set("#background", "cursor", 0/2)
+	end
+end

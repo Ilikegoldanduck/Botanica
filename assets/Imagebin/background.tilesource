@@ -1,0 +1,12 @@
+image: "/assets/images/background.png"
+tile_width: 240
+tile_height: 135
+collision_groups: "default"
+animations {
+  id: "anim"
+  start_tile: 1
+  end_tile: 2
+  playback: PLAYBACK_NONE
+  fps: 0
+}
+extrude_borders: 2

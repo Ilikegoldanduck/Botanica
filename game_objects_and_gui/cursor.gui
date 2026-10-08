@@ -1,0 +1,29 @@
+script: "/scripts/mouseState.gui_script"
+textures {
+  name: "cursor"
+  texture: "/assets/Imagebin/cursor.tilesource"
+}
+nodes {
+  position {
+    x: 20.0
+    y: -19.5
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  size {
+    x: 17.0
+    y: 17.0
+  }
+  type: TYPE_BOX
+  texture: "cursor/0"
+  id: "box"
+  layer: "layer"
+  inherit_alpha: true
+}
+layers {
+  name: "layer"
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT

@@ -1,0 +1,15 @@
+image: "/assets/images/seedbag.png"
+tile_width: 11
+tile_height: 13
+collision_groups: "default"
+animations {
+  id: "hover"
+  start_tile: 2
+  end_tile: 2
+}
+animations {
+  id: "initial"
+  start_tile: 1
+  end_tile: 1
+}
+extrude_borders: 2

@@ -1,0 +1,93 @@
+go.property("growth", 0)
+go.property("cycle", 0)
+go.property("id", 0)
+go.property("item_id", 0)
+go.property("selection", msg.url())
+local mouseCheck = require("scripts.mouseCheck")
+local flowerInfo = require("scripts.flowerInfo")
+
+local mouse_pos
+local cd = false
+
+function init(self)
+	self.item_id = go.get_id()
+	go.set("#sprite", "cursor", (4 * (self.id - 1)) / 8192)
+end
+
+function final(self)
+	-- Add finalization code here
+	-- Learn more: https://defold.com/manuals/script/
+	-- Remove this function if not needed
+end
+
+function on_message(self, message_id, message, sender)
+	
+end
+
+function update(self, dt)
+	mouse_pos = mouseCheck.getPos()
+	self.growth = self.growth + 100 * dt
+	if (self.growth > 40) then 
+		go.set("#sprite", "cursor", (4 * (self.id - 1) + 3) / 8192)
+		self.cycle = 3
+	elseif (self.growth > 30) then
+		go.set("#sprite", "cursor", (4 * (self.id - 1) + 2) / 8192)
+		self.cycle = 2
+	elseif (self.growth > 10) then
+		go.set("#sprite", "cursor", (4 * (self.id - 1) + 1) / 8192)
+		self.cycle = 1
+	end
+	if self.selection ~= nil then
+		msg.post(self.selection, "cycle", {self.cycle})
+	end
+	if math.abs(mouse_pos.x - go.get_position(self.item_id).x) <= 30 and math.abs(mouse_pos.y - go.get_position(self.item_id).y + 20) <= 40 then		
+		mouseCheck.changeState(1)
+	end
+end
+
+function late_update(self, dt)
+	-- This function is called at the end of update cycle but before render
+	-- Learn more: https://defold.com/manuals/script/
+	-- Remove this function if not needed
+end
+
+function fixed_update(self, dt)
+	-- This function is called if 'Fixed Update Frequency' is enabled in the Engine section of game.project
+	-- Can be coupled with fixed updates of the physics simulation if 'Use Fixed Timestep' is enabled in
+	-- Physics section of game.project
+	-- Add update code here
+	-- Learn more: https://defold.com/manuals/script/
+	-- Remove this function if not needed
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("selected") then
+		if mouseCheck.getState() == 1.5 then
+			local store = mouseCheck.getStored()
+			mouseCheck.escapeGui()
+			if self.item_id == store[2].path then
+				msg.post("/book#Herbbook", "escape", {1})
+			else
+				msg.post(store[2], "harvested", {1})
+				msg.post("/book#Herbbook", "escape", {1})
+				msg.post("/flower_factory#flowery", "spawn", {go.get_position().x, go.get_position().y, self.id + store[1]})
+				if not flowerInfo.ID(self.id + store[1])[4] then
+					flowerInfo.unlock(self.id + store[1])
+				end
+				go.delete()
+			end
+		else
+			self.selection = factory.create("#selectionfactory", vmath.vector3(go.get_position(self.item_id).x, go.get_position(self.item_id).y - 40, .6), nil, {item_id = msg.url(go.get_id()), flower_id = self.id}, 0)
+		end
+	elseif message_id == hash("delete") then
+		self.selection = nil
+	elseif message_id == hash("harvested") then
+		go.delete()
+	end
+end
+
+function on_reload(self)
+	-- Add reload-handling code here
+	-- Learn more: https://defold.com/manuals/hot-reload/
+	-- Remove this function if not needed
+end

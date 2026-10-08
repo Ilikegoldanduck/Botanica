@@ -1,0 +1,18 @@
+go.property("seed_time", 0)
+
+function init(self)
+	-- Add initialization code here
+	-- Learn more: https://defold.com/manuals/script/
+	-- Remove this function if not needed
+end
+
+function update(self, dt)
+	local growth = os.time() - self.seed_time
+	if (growth > 3600) then
+		go.set("#sprite1", "cursor", 1)
+		go.set("#sprite2", "cursor", 1)
+	else
+		go.set("#sprite1", "cursor", math.floor((39 * (growth % 1200)) / 1200) / 39)
+		go.set("#sprite2", "cursor", math.floor((39 * (growth % 1200)) / 1200) / 39)
+	end
+end

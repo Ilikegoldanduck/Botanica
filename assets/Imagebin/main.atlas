@@ -1,0 +1,37 @@
+images {
+  image: "/assets/images/background.png"
+}
+images {
+  image: "/assets/images/logo.png"
+}
+images {
+  image: "/builtins/graphics/particle_blob.png"
+}
+images {
+  image: "/assets/images/bookouteredge.png"
+}
+images {
+  image: "/assets/images/bookbutton.png"
+}
+images {
+  image: "/assets/images/settingsButton.png"
+}
+images {
+  image: "/assets/images/flower art.png"
+}
+images {
+  image: "/assets/images/clock.png"
+}
+images {
+  image: "/assets/images/needle.png"
+}
+images {
+  image: "/assets/images/greenhouse.png"
+}
+images {
+  image: "/assets/images/seedbase.png"
+}
+images {
+  image: "/assets/images/bench.png"
+}
+extrude_borders: 2

@@ -1,0 +1,2247 @@
+script: "/scripts/scripty.gui_script"
+fonts {
+  name: "IndieFlower"
+  font: "/assets/fonts/IndieFlower.font"
+}
+textures {
+  name: "bookie"
+  texture: "/assets/Imagebin/bookie.tilesource"
+}
+textures {
+  name: "flowerbook"
+  texture: "/assets/Imagebin/flowerbook.tilesource"
+}
+textures {
+  name: "main"
+  texture: "/assets/Imagebin/main.atlas"
+}
+textures {
+  name: "useButton"
+  texture: "/assets/Imagebin/useButton.tilesource"
+}
+textures {
+  name: "arrowButton"
+  texture: "/assets/Imagebin/arrowButton.tilesource"
+}
+textures {
+  name: "bookmarks"
+  texture: "/assets/Imagebin/bookmarks.tilesource"
+}
+textures {
+  name: "checkbox"
+  texture: "/assets/Imagebin/checkbox.tilesource"
+}
+textures {
+  name: "saveandquit"
+  texture: "/assets/Imagebin/saveandquit.tilesource"
+}
+textures {
+  name: "seasonal_icon"
+  texture: "/assets/Imagebin/seasonal_icon.tilesource"
+}
+textures {
+  name: "alamancArrowButton"
+  texture: "/assets/Imagebin/alamancArrowButton.tilesource"
+}
+textures {
+  name: "seed bag"
+  texture: "/assets/Imagebin/seed bag.tilesource"
+}
+textures {
+  name: "woah so sigma 2"
+  texture: "/assets/Imagebin/woah so sigma 2.tilesource"
+}
+nodes {
+  position {
+    x: 2600.0
+    y: 540.0
+  }
+  scale {
+    x: 37.5
+    y: 37.5
+  }
+  type: TYPE_BOX
+  texture: "main/bookouteredge"
+  id: "base"
+  layer: "layer"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -8.5
+  }
+  scale {
+    x: 0.0666667
+    y: 0.0666667
+  }
+  type: TYPE_BOX
+  texture: "bookie/anim"
+  id: "page1"
+  parent: "base"
+  layer: "layer4"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -7.5
+  }
+  size {
+    x: 150.0
+    y: 270.0
+  }
+  type: TYPE_BOX
+  id: "photo1"
+  parent: "page1"
+  layer: "layer4"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -7.5
+  }
+  size {
+    x: 120.0
+    y: 240.0
+  }
+  color {
+    x: 0.5019608
+    y: 0.5019608
+    z: 0.5019608
+  }
+  type: TYPE_BOX
+  id: "photo2"
+  parent: "page1"
+  layer: "layer5"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -7.5
+  }
+  scale {
+    x: 15.0
+    y: 15.0
+  }
+  type: TYPE_BOX
+  texture: "flowerbook/1"
+  id: "flower"
+  parent: "page1"
+  layer: "layer6"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -8.5
+  }
+  scale {
+    x: 15.0
+    y: 15.0
+  }
+  type: TYPE_BOX
+  texture: "main/flower art"
+  id: "flowerbg"
+  parent: "page1"
+  layer: "layer6"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+  visible: false
+}
+nodes {
+  position {
+    x: -7.5
+  }
+  size {
+    x: 150.0
+    y: 270.0
+  }
+  type: TYPE_BOX
+  id: "alamanc1"
+  parent: "page1"
+  layer: "layer4"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+  enabled: false
+  visible: false
+}
+nodes {
+  position {
+    x: -75.0
+    y: 135.0
+  }
+  scale {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_BOX
+  texture: "flowerbook/1"
+  id: "slot1"
+  pivot: PIVOT_NW
+  parent: "alamanc1"
+  layer: "layer8"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -20.0
+    y: 135.0
+  }
+  scale {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_BOX
+  texture: "flowerbook/1"
+  id: "slot2"
+  pivot: PIVOT_NW
+  parent: "alamanc1"
+  layer: "layer8"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 35.0
+    y: 135.0
+  }
+  scale {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_BOX
+  texture: "flowerbook/1"
+  id: "slot3"
+  pivot: PIVOT_NW
+  parent: "alamanc1"
+  layer: "layer8"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -75.0
+    y: 40.0
+  }
+  scale {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_BOX
+  texture: "flowerbook/1"
+  id: "slot4"
+  pivot: PIVOT_NW
+  parent: "alamanc1"
+  layer: "layer8"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -20.0
+    y: 40.0
+  }
+  scale {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_BOX
+  texture: "flowerbook/1"
+  id: "slot5"
+  pivot: PIVOT_NW
+  parent: "alamanc1"
+  layer: "layer8"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 35.0
+    y: 40.0
+  }
+  scale {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_BOX
+  texture: "flowerbook/1"
+  id: "slot6"
+  pivot: PIVOT_NW
+  parent: "alamanc1"
+  layer: "layer8"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -75.0
+    y: -55.0
+  }
+  scale {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_BOX
+  texture: "flowerbook/1"
+  id: "slot7"
+  pivot: PIVOT_NW
+  parent: "alamanc1"
+  layer: "layer8"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -20.0
+    y: -55.0
+  }
+  scale {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_BOX
+  texture: "flowerbook/1"
+  id: "slot8"
+  pivot: PIVOT_NW
+  parent: "alamanc1"
+  layer: "layer8"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 35.0
+    y: -55.0
+  }
+  scale {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_BOX
+  texture: "flowerbook/1"
+  id: "slot9"
+  pivot: PIVOT_NW
+  parent: "alamanc1"
+  layer: "layer8"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 35.0
+    y: 135.0
+  }
+  size {
+    x: 40.0
+    y: 80.0
+  }
+  color {
+    x: 0.5019608
+    y: 0.5019608
+    z: 0.5019608
+  }
+  type: TYPE_BOX
+  id: "bgs9"
+  pivot: PIVOT_NW
+  parent: "alamanc1"
+  layer: "layer7"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 35.0
+    y: -55.0
+  }
+  size {
+    x: 40.0
+    y: 80.0
+  }
+  color {
+    x: 0.5019608
+    y: 0.5019608
+    z: 0.5019608
+  }
+  type: TYPE_BOX
+  id: "bgs1"
+  pivot: PIVOT_NW
+  parent: "alamanc1"
+  layer: "layer7"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -20.0
+    y: 40.0
+  }
+  size {
+    x: 40.0
+    y: 80.0
+  }
+  color {
+    x: 0.5019608
+    y: 0.5019608
+    z: 0.5019608
+  }
+  type: TYPE_BOX
+  id: "bgs2"
+  pivot: PIVOT_NW
+  parent: "alamanc1"
+  layer: "layer7"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -75.0
+    y: 40.0
+  }
+  size {
+    x: 40.0
+    y: 80.0
+  }
+  color {
+    x: 0.5019608
+    y: 0.5019608
+    z: 0.5019608
+  }
+  type: TYPE_BOX
+  id: "bgs3"
+  pivot: PIVOT_NW
+  parent: "alamanc1"
+  layer: "layer7"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -20.0
+    y: 135.0
+  }
+  size {
+    x: 40.0
+    y: 80.0
+  }
+  color {
+    x: 0.5019608
+    y: 0.5019608
+    z: 0.5019608
+  }
+  type: TYPE_BOX
+  id: "bgs4"
+  pivot: PIVOT_NW
+  parent: "alamanc1"
+  layer: "layer7"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 35.0
+    y: 40.0
+  }
+  size {
+    x: 40.0
+    y: 80.0
+  }
+  color {
+    x: 0.5019608
+    y: 0.5019608
+    z: 0.5019608
+  }
+  type: TYPE_BOX
+  id: "bgs5"
+  pivot: PIVOT_NW
+  parent: "alamanc1"
+  layer: "layer7"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -20.0
+    y: -55.0
+  }
+  size {
+    x: 40.0
+    y: 80.0
+  }
+  color {
+    x: 0.5019608
+    y: 0.5019608
+    z: 0.5019608
+  }
+  type: TYPE_BOX
+  id: "bgs6"
+  pivot: PIVOT_NW
+  parent: "alamanc1"
+  layer: "layer7"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -75.0
+    y: -55.0
+  }
+  size {
+    x: 40.0
+    y: 80.0
+  }
+  color {
+    x: 0.5019608
+    y: 0.5019608
+    z: 0.5019608
+  }
+  type: TYPE_BOX
+  id: "bgs7"
+  pivot: PIVOT_NW
+  parent: "alamanc1"
+  layer: "layer7"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -75.0
+    y: 135.0
+  }
+  size {
+    x: 40.0
+    y: 80.0
+  }
+  color {
+    x: 0.5019608
+    y: 0.5019608
+    z: 0.5019608
+  }
+  type: TYPE_BOX
+  id: "bgs8"
+  pivot: PIVOT_NW
+  parent: "alamanc1"
+  layer: "layer7"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 85.0
+    y: 10.0
+  }
+  rotation {
+    z: 180.0
+  }
+  type: TYPE_BOX
+  texture: "alamancArrowButton/initial"
+  id: "alamancUp1"
+  parent: "alamanc1"
+  layer: "layer7"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 85.0
+    y: -10.0
+  }
+  type: TYPE_BOX
+  texture: "alamancArrowButton/initial"
+  id: "alamancDown1"
+  parent: "alamanc1"
+  layer: "layer7"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 8.5
+  }
+  scale {
+    x: 0.0666667
+    y: 0.0666667
+  }
+  size {
+    x: 255.0
+    y: 330.0
+  }
+  type: TYPE_BOX
+  texture: "bookie/anim2"
+  id: "page2"
+  parent: "base"
+  layer: "layer4"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: -92.5
+    y: 150.0
+  }
+  scale {
+    x: 0.65
+    y: 0.65
+  }
+  size {
+    x: 310.0
+    y: 50.0
+  }
+  color {
+    x: 0.25
+    y: 0.1352459
+    z: 0.0
+  }
+  type: TYPE_TEXT
+  text: "Annual Lobelia"
+  font: "IndieFlower"
+  id: "titleText"
+  pivot: PIVOT_NW
+  line_break: true
+  parent: "page2"
+  layer: "layer4"
+  inherit_alpha: true
+  text_leading: 0.5
+}
+nodes {
+  position {
+    x: -92.5
+    y: 120.0
+  }
+  scale {
+    x: 0.3
+    y: 0.3
+  }
+  size {
+    x: 600.0
+    y: 50.0
+  }
+  color {
+    x: 0.48770493
+    y: 0.29686958
+    z: 0.07195646
+  }
+  type: TYPE_TEXT
+  text: "Lobelia erinus"
+  font: "IndieFlower"
+  id: "subtitleText"
+  pivot: PIVOT_NW
+  line_break: true
+  parent: "page2"
+  layer: "layer4"
+  inherit_alpha: true
+  text_leading: 0.5
+}
+nodes {
+  position {
+    x: -92.5
+    y: 150.0
+  }
+  scale {
+    x: 0.4
+    y: 0.4
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  color {
+    x: 0.38431373
+    y: 0.20784314
+    z: 0.0
+  }
+  type: TYPE_TEXT
+  text: "fullscreen\n"
+  "mute\n"
+  "season"
+  font: "IndieFlower"
+  id: "settings stuff"
+  pivot: PIVOT_NW
+  parent: "page2"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 400.0
+    y: -12.5
+  }
+  scale {
+    x: 2.5
+    y: 2.5
+  }
+  type: TYPE_BOX
+  texture: "checkbox/unchecked"
+  id: "fullscreen"
+  pivot: PIVOT_NW
+  parent: "settings stuff"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 400.0
+    y: -87.5
+  }
+  scale {
+    x: 2.5
+    y: 2.5
+  }
+  type: TYPE_BOX
+  texture: "checkbox/unchecked"
+  id: "mute"
+  pivot: PIVOT_NW
+  parent: "settings stuff"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.5
+    y: -128.0
+  }
+  scale {
+    x: 3.5
+    y: 3.5
+  }
+  type: TYPE_BOX
+  texture: "saveandquit/initial"
+  id: "quitButton"
+  parent: "page2"
+  layer: "layer4"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+  visible: false
+}
+nodes {
+  position {
+    x: -92.5
+    y: 100.0
+  }
+  scale {
+    x: 0.4
+    y: 0.4
+  }
+  size {
+    x: 500.0
+    y: 480.0
+  }
+  color {
+    x: 0.38431373
+    y: 0.20784314
+    z: 0.0
+  }
+  type: TYPE_TEXT
+  text: "You..\n"
+  "shouldn\'t be seeing this..?"
+  font: "IndieFlower"
+  id: "description"
+  pivot: PIVOT_NW
+  line_break: true
+  parent: "page2"
+  layer: "layer4"
+  inherit_alpha: true
+  text_leading: 0.65
+}
+nodes {
+  position {
+    x: 16.875
+    y: 10.875
+  }
+  scale {
+    x: 0.15
+    y: 0.15
+  }
+  type: TYPE_BOX
+  texture: "arrowButton/anim"
+  id: "rightArrow"
+  parent: "base"
+  layer: "layer7"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 8.5
+  }
+  scale {
+    x: 0.0666667
+    y: 0.0666667
+  }
+  size {
+    x: 255.0
+    y: 330.0
+  }
+  type: TYPE_BOX
+  texture: "bookie/anim2"
+  id: "page4"
+  parent: "base"
+  layer: "layer1"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: -92.5
+    y: 150.0
+  }
+  scale {
+    x: 0.65
+    y: 0.65
+  }
+  size {
+    x: 310.0
+    y: 50.0
+  }
+  color {
+    x: 0.25
+    y: 0.1352459
+    z: 0.0
+  }
+  type: TYPE_TEXT
+  text: "Annual Lobelia"
+  font: "IndieFlower"
+  id: "titleText1"
+  pivot: PIVOT_NW
+  line_break: true
+  parent: "page4"
+  layer: "layer1"
+  inherit_alpha: true
+  text_leading: 0.5
+}
+nodes {
+  position {
+    x: -92.5
+    y: 120.0
+  }
+  scale {
+    x: 0.3
+    y: 0.3
+  }
+  size {
+    x: 600.0
+    y: 50.0
+  }
+  color {
+    x: 0.48770493
+    y: 0.29686958
+    z: 0.07195646
+  }
+  type: TYPE_TEXT
+  text: "Lobelia erinus"
+  font: "IndieFlower"
+  id: "subtitleText1"
+  pivot: PIVOT_NW
+  line_break: true
+  parent: "page4"
+  layer: "layer1"
+  inherit_alpha: true
+  text_leading: 0.5
+}
+nodes {
+  position {
+    x: -92.5
+    y: 100.0
+  }
+  scale {
+    x: 0.4
+    y: 0.4
+  }
+  size {
+    x: 500.0
+    y: 480.0
+  }
+  color {
+    x: 0.38431373
+    y: 0.20784314
+    z: 0.0
+  }
+  type: TYPE_TEXT
+  text: "blah blah blah description jibber jabber i\'m implementing this later lol"
+  font: "IndieFlower"
+  id: "description1"
+  pivot: PIVOT_NW
+  line_break: true
+  parent: "page4"
+  layer: "layer1"
+  inherit_alpha: true
+  text_leading: 0.65
+}
+nodes {
+  position {
+    x: -92.5
+    y: 150.0
+  }
+  scale {
+    x: 0.4
+    y: 0.4
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  color {
+    x: 0.38431373
+    y: 0.20784314
+    z: 0.0
+  }
+  type: TYPE_TEXT
+  text: "fullscreen\n"
+  "mute\n"
+  "season"
+  font: "IndieFlower"
+  id: "settings stuff1"
+  pivot: PIVOT_NW
+  parent: "page4"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 400.0
+    y: -12.5
+  }
+  scale {
+    x: 2.5
+    y: 2.5
+  }
+  type: TYPE_BOX
+  texture: "checkbox/unchecked"
+  id: "fullscreen1"
+  pivot: PIVOT_NW
+  parent: "settings stuff1"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 400.0
+    y: -87.5
+  }
+  scale {
+    x: 2.5
+    y: 2.5
+  }
+  type: TYPE_BOX
+  texture: "checkbox/unchecked"
+  id: "mute1"
+  pivot: PIVOT_NW
+  parent: "settings stuff1"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.5
+    y: -128.0
+  }
+  scale {
+    x: 3.5
+    y: 3.5
+  }
+  type: TYPE_BOX
+  texture: "saveandquit/initial"
+  id: "quitButton1"
+  parent: "page4"
+  layer: "layer3"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+  visible: false
+}
+nodes {
+  position {
+    x: -8.5
+  }
+  scale {
+    x: 0.0666667
+    y: 0.0666667
+  }
+  type: TYPE_BOX
+  texture: "bookie/anim"
+  id: "page3"
+  parent: "base"
+  layer: "layer1"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -7.5
+  }
+  size {
+    x: 150.0
+    y: 270.0
+  }
+  type: TYPE_BOX
+  id: "photo4"
+  parent: "page3"
+  layer: "layer1"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -7.5
+  }
+  size {
+    x: 120.0
+    y: 240.0
+  }
+  color {
+    x: 0.5019608
+    y: 0.5019608
+    z: 0.5019608
+  }
+  type: TYPE_BOX
+  id: "photo3"
+  parent: "page3"
+  layer: "layer2"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -7.5
+  }
+  scale {
+    x: 15.0
+    y: 15.0
+  }
+  type: TYPE_BOX
+  texture: "flowerbook/1"
+  id: "flower1"
+  parent: "page3"
+  layer: "layer3"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -8.5
+  }
+  scale {
+    x: 15.0
+    y: 15.0
+  }
+  type: TYPE_BOX
+  texture: "main/flower art"
+  id: "flowerbg1"
+  parent: "page3"
+  layer: "layer3"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+  visible: false
+}
+nodes {
+  position {
+    x: -7.5
+  }
+  size {
+    x: 150.0
+    y: 270.0
+  }
+  type: TYPE_BOX
+  id: "alamanc"
+  parent: "page3"
+  layer: "layer4"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+  enabled: false
+  visible: false
+}
+nodes {
+  position {
+    x: -75.0
+    y: 135.0
+  }
+  scale {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_BOX
+  texture: "flowerbook/1"
+  id: "slot"
+  pivot: PIVOT_NW
+  parent: "alamanc"
+  layer: "layer3"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -20.0
+    y: 135.0
+  }
+  scale {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_BOX
+  texture: "flowerbook/1"
+  id: "slot10"
+  pivot: PIVOT_NW
+  parent: "alamanc"
+  layer: "layer3"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 35.0
+    y: 135.0
+  }
+  scale {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_BOX
+  texture: "flowerbook/1"
+  id: "slot11"
+  pivot: PIVOT_NW
+  parent: "alamanc"
+  layer: "layer3"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -75.0
+    y: 40.0
+  }
+  scale {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_BOX
+  texture: "flowerbook/1"
+  id: "slot12"
+  pivot: PIVOT_NW
+  parent: "alamanc"
+  layer: "layer3"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -20.0
+    y: 40.0
+  }
+  scale {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_BOX
+  texture: "flowerbook/1"
+  id: "slot13"
+  pivot: PIVOT_NW
+  parent: "alamanc"
+  layer: "layer3"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 35.0
+    y: 40.0
+  }
+  scale {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_BOX
+  texture: "flowerbook/1"
+  id: "slot14"
+  pivot: PIVOT_NW
+  parent: "alamanc"
+  layer: "layer3"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -75.0
+    y: -55.0
+  }
+  scale {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_BOX
+  texture: "flowerbook/1"
+  id: "slot15"
+  pivot: PIVOT_NW
+  parent: "alamanc"
+  layer: "layer3"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -20.0
+    y: -55.0
+  }
+  scale {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_BOX
+  texture: "flowerbook/1"
+  id: "slot16"
+  pivot: PIVOT_NW
+  parent: "alamanc"
+  layer: "layer3"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 35.0
+    y: -55.0
+  }
+  scale {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_BOX
+  texture: "flowerbook/1"
+  id: "slot17"
+  pivot: PIVOT_NW
+  parent: "alamanc"
+  layer: "layer3"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 35.0
+    y: 135.0
+  }
+  size {
+    x: 40.0
+    y: 80.0
+  }
+  color {
+    x: 0.5019608
+    y: 0.5019608
+    z: 0.5019608
+  }
+  type: TYPE_BOX
+  id: "bgs"
+  pivot: PIVOT_NW
+  parent: "alamanc"
+  layer: "layer2"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 35.0
+    y: -55.0
+  }
+  size {
+    x: 40.0
+    y: 80.0
+  }
+  color {
+    x: 0.5019608
+    y: 0.5019608
+    z: 0.5019608
+  }
+  type: TYPE_BOX
+  id: "bgs10"
+  pivot: PIVOT_NW
+  parent: "alamanc"
+  layer: "layer2"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -20.0
+    y: 40.0
+  }
+  size {
+    x: 40.0
+    y: 80.0
+  }
+  color {
+    x: 0.5019608
+    y: 0.5019608
+    z: 0.5019608
+  }
+  type: TYPE_BOX
+  id: "bgs11"
+  pivot: PIVOT_NW
+  parent: "alamanc"
+  layer: "layer2"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -75.0
+    y: 40.0
+  }
+  size {
+    x: 40.0
+    y: 80.0
+  }
+  color {
+    x: 0.5019608
+    y: 0.5019608
+    z: 0.5019608
+  }
+  type: TYPE_BOX
+  id: "bgs12"
+  pivot: PIVOT_NW
+  parent: "alamanc"
+  layer: "layer2"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -20.0
+    y: 135.0
+  }
+  size {
+    x: 40.0
+    y: 80.0
+  }
+  color {
+    x: 0.5019608
+    y: 0.5019608
+    z: 0.5019608
+  }
+  type: TYPE_BOX
+  id: "bgs13"
+  pivot: PIVOT_NW
+  parent: "alamanc"
+  layer: "layer2"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 35.0
+    y: 40.0
+  }
+  size {
+    x: 40.0
+    y: 80.0
+  }
+  color {
+    x: 0.5019608
+    y: 0.5019608
+    z: 0.5019608
+  }
+  type: TYPE_BOX
+  id: "bgs14"
+  pivot: PIVOT_NW
+  parent: "alamanc"
+  layer: "layer2"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -20.0
+    y: -55.0
+  }
+  size {
+    x: 40.0
+    y: 80.0
+  }
+  color {
+    x: 0.5019608
+    y: 0.5019608
+    z: 0.5019608
+  }
+  type: TYPE_BOX
+  id: "bgs15"
+  pivot: PIVOT_NW
+  parent: "alamanc"
+  layer: "layer2"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -75.0
+    y: -55.0
+  }
+  size {
+    x: 40.0
+    y: 80.0
+  }
+  color {
+    x: 0.5019608
+    y: 0.5019608
+    z: 0.5019608
+  }
+  type: TYPE_BOX
+  id: "bgs16"
+  pivot: PIVOT_NW
+  parent: "alamanc"
+  layer: "layer2"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -75.0
+    y: 135.0
+  }
+  size {
+    x: 40.0
+    y: 80.0
+  }
+  color {
+    x: 0.5019608
+    y: 0.5019608
+    z: 0.5019608
+  }
+  type: TYPE_BOX
+  id: "bgs17"
+  pivot: PIVOT_NW
+  parent: "alamanc"
+  layer: "layer2"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 85.0
+    y: 10.0
+  }
+  rotation {
+    z: 180.0
+  }
+  type: TYPE_BOX
+  texture: "alamancArrowButton/initial"
+  id: "alamancUp2"
+  parent: "alamanc"
+  layer: "layer2"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 85.0
+    y: -10.0
+  }
+  type: TYPE_BOX
+  texture: "alamancArrowButton/initial"
+  id: "alamancDown2"
+  parent: "alamanc"
+  layer: "layer2"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -16.875
+    y: 10.875
+  }
+  scale {
+    x: -0.15
+    y: 0.15
+  }
+  type: TYPE_BOX
+  texture: "arrowButton/anim"
+  id: "leftArrow"
+  parent: "base"
+  layer: "layer7"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 4.0
+  }
+  scale {
+    x: 0.15
+    y: 0.15
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_BOX
+  id: "bookmarks"
+  parent: "base"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+  visible: false
+}
+nodes {
+  position {
+    x: -124.0
+    y: 45.0
+  }
+  type: TYPE_BOX
+  texture: "bookmarks/herb"
+  id: "herbs"
+  parent: "bookmarks"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -110.0
+    y: -60.0
+  }
+  type: TYPE_BOX
+  texture: "bookmarks/settings"
+  id: "settings"
+  parent: "bookmarks"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -110.0
+    y: -45.0
+  }
+  type: TYPE_BOX
+  texture: "bookmarks/help"
+  id: "help"
+  parent: "bookmarks"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 12.0
+    y: 13.0
+  }
+  scale {
+    x: 0.025
+    y: 0.025
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "Sort Unlocked"
+  font: "IndieFlower"
+  id: "unlockText"
+  parent: "base"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 17.0
+    y: 13.0
+  }
+  scale {
+    x: 0.1
+    y: 0.1
+  }
+  type: TYPE_BOX
+  texture: "checkbox/unchecked"
+  id: "sortBox"
+  parent: "base"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -450.0
+    y: 540.0
+  }
+  scale {
+    x: 37.5
+    y: 37.5
+  }
+  type: TYPE_BOX
+  texture: "main/seedbase"
+  id: "seedbase"
+  layer: "layer3"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -0.75
+  }
+  scale {
+    x: 0.067
+    y: 0.067
+  }
+  size {
+    x: 150.0
+    y: 270.0
+  }
+  type: TYPE_BOX
+  id: "alamanc2"
+  parent: "seedbase"
+  layer: "layer2"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -75.0
+    y: 135.0
+  }
+  scale {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_BOX
+  texture: "flowerbook/1"
+  id: "seedslot1"
+  pivot: PIVOT_NW
+  parent: "alamanc2"
+  layer: "layer8"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -20.0
+    y: 135.0
+  }
+  scale {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_BOX
+  texture: "flowerbook/1"
+  id: "seedslot2"
+  pivot: PIVOT_NW
+  parent: "alamanc2"
+  layer: "layer8"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 35.0
+    y: 135.0
+  }
+  scale {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_BOX
+  texture: "flowerbook/1"
+  id: "seedslot3"
+  pivot: PIVOT_NW
+  parent: "alamanc2"
+  layer: "layer8"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -75.0
+    y: 40.0
+  }
+  scale {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_BOX
+  texture: "flowerbook/1"
+  id: "seedslot4"
+  pivot: PIVOT_NW
+  parent: "alamanc2"
+  layer: "layer8"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -20.0
+    y: 40.0
+  }
+  scale {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_BOX
+  texture: "flowerbook/1"
+  id: "seedslot5"
+  pivot: PIVOT_NW
+  parent: "alamanc2"
+  layer: "layer8"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 35.0
+    y: 40.0
+  }
+  scale {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_BOX
+  texture: "flowerbook/1"
+  id: "seedslot6"
+  pivot: PIVOT_NW
+  parent: "alamanc2"
+  layer: "layer8"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -75.0
+    y: -55.0
+  }
+  scale {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_BOX
+  texture: "flowerbook/1"
+  id: "seedslot7"
+  pivot: PIVOT_NW
+  parent: "alamanc2"
+  layer: "layer8"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -20.0
+    y: -55.0
+  }
+  scale {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_BOX
+  texture: "flowerbook/1"
+  id: "seedslot8"
+  pivot: PIVOT_NW
+  parent: "alamanc2"
+  layer: "layer8"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 35.0
+    y: -55.0
+  }
+  scale {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_BOX
+  texture: "flowerbook/1"
+  id: "seedslot9"
+  pivot: PIVOT_NW
+  parent: "alamanc2"
+  layer: "layer8"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 85.0
+    y: 10.0
+  }
+  rotation {
+    z: 180.0
+  }
+  type: TYPE_BOX
+  texture: "alamancArrowButton/initial"
+  id: "alamancUp"
+  parent: "alamanc2"
+  layer: "layer7"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 85.0
+    y: -10.0
+  }
+  type: TYPE_BOX
+  texture: "alamancArrowButton/initial"
+  id: "alamancDown"
+  parent: "alamanc2"
+  layer: "layer7"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -75.0
+    y: 135.0
+  }
+  size {
+    x: 40.0
+    y: 80.0
+  }
+  color {
+    x: 0.5019608
+    y: 0.5019608
+    z: 0.5019608
+  }
+  type: TYPE_BOX
+  id: "seedbg1"
+  pivot: PIVOT_NW
+  parent: "alamanc2"
+  layer: "layer7"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -20.0
+    y: 135.0
+  }
+  size {
+    x: 40.0
+    y: 80.0
+  }
+  color {
+    x: 0.5019608
+    y: 0.5019608
+    z: 0.5019608
+  }
+  type: TYPE_BOX
+  id: "seedbg2"
+  pivot: PIVOT_NW
+  parent: "alamanc2"
+  layer: "layer7"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 35.0
+    y: 135.0
+  }
+  size {
+    x: 40.0
+    y: 80.0
+  }
+  color {
+    x: 0.5019608
+    y: 0.5019608
+    z: 0.5019608
+  }
+  type: TYPE_BOX
+  id: "seedbg3"
+  pivot: PIVOT_NW
+  parent: "alamanc2"
+  layer: "layer7"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -75.0
+    y: 40.0
+  }
+  size {
+    x: 40.0
+    y: 80.0
+  }
+  color {
+    x: 0.5019608
+    y: 0.5019608
+    z: 0.5019608
+  }
+  type: TYPE_BOX
+  id: "seedbg4"
+  pivot: PIVOT_NW
+  parent: "alamanc2"
+  layer: "layer7"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -20.0
+    y: 40.0
+  }
+  size {
+    x: 40.0
+    y: 80.0
+  }
+  color {
+    x: 0.5019608
+    y: 0.5019608
+    z: 0.5019608
+  }
+  type: TYPE_BOX
+  id: "seedbg5"
+  pivot: PIVOT_NW
+  parent: "alamanc2"
+  layer: "layer7"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 35.0
+    y: 40.0
+  }
+  size {
+    x: 40.0
+    y: 80.0
+  }
+  color {
+    x: 0.5019608
+    y: 0.5019608
+    z: 0.5019608
+  }
+  type: TYPE_BOX
+  id: "seedbg6"
+  pivot: PIVOT_NW
+  parent: "alamanc2"
+  layer: "layer7"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -75.0
+    y: -55.0
+  }
+  size {
+    x: 40.0
+    y: 80.0
+  }
+  color {
+    x: 0.5019608
+    y: 0.5019608
+    z: 0.5019608
+  }
+  type: TYPE_BOX
+  id: "seedbg7"
+  pivot: PIVOT_NW
+  parent: "alamanc2"
+  layer: "layer7"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -20.0
+    y: -55.0
+  }
+  size {
+    x: 40.0
+    y: 80.0
+  }
+  color {
+    x: 0.5019608
+    y: 0.5019608
+    z: 0.5019608
+  }
+  type: TYPE_BOX
+  id: "seedbg8"
+  pivot: PIVOT_NW
+  parent: "alamanc2"
+  layer: "layer7"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 35.0
+    y: -55.0
+  }
+  size {
+    x: 40.0
+    y: 80.0
+  }
+  color {
+    x: 0.5019608
+    y: 0.5019608
+    z: 0.5019608
+  }
+  type: TYPE_BOX
+  id: "seedbg9"
+  pivot: PIVOT_NW
+  parent: "alamanc2"
+  layer: "layer7"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  size {
+    x: 1.0
+    y: 1.0
+  }
+  type: TYPE_BOX
+  id: "guibase"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+  visible: false
+}
+nodes {
+  position {
+    x: 960.0
+    y: 1260.0
+  }
+  size {
+    x: 2000.0
+    y: 360.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_BOX
+  id: "Outerlayer"
+  parent: "guibase"
+  layer: "layer8"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 960.0
+    y: -180.0
+  }
+  size {
+    x: 2000.0
+    y: 360.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_BOX
+  id: "Outerlayer1"
+  parent: "guibase"
+  layer: "layer8"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 2600.0
+    y: 540.0
+  }
+  size {
+    x: 1360.0
+    y: 1200.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_BOX
+  id: "Outerlayer2"
+  parent: "guibase"
+  layer: "layer8"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+  visible: false
+}
+nodes {
+  position {
+    x: 48.0
+    y: 1032.0
+  }
+  scale {
+    x: 6.0
+    y: 6.0
+  }
+  type: TYPE_BOX
+  texture: "seasonal_icon/winter"
+  id: "season"
+  parent: "guibase"
+  layer: "layer7"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    y: 1080.0
+  }
+  scale {
+    x: 6.0
+    y: 6.0
+  }
+  type: TYPE_BOX
+  texture: "main/clock"
+  id: "clock"
+  pivot: PIVOT_NW
+  parent: "guibase"
+  layer: "layer6"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -20.0
+    y: 843.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  type: TYPE_BOX
+  texture: "main/needle"
+  id: "needle"
+  pivot: PIVOT_W
+  parent: "guibase"
+  layer: "layer6"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 1856.0
+    y: 64.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  type: TYPE_BOX
+  texture: "main/bookbutton"
+  id: "herbbutton"
+  parent: "guibase"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 960.0
+    y: 1140.0
+  }
+  scale {
+    x: 1.5
+    y: 1.5
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "Not mature enough :(\n"
+  ""
+  font: "IndieFlower"
+  id: "info text"
+  parent: "guibase"
+  layer: "layer"
+  inherit_alpha: true
+  shadow_alpha: 0.0
+}
+nodes {
+  position {
+    x: 190.0
+    y: 544.0
+  }
+  scale {
+    x: 8.0
+    y: 8.0
+  }
+  type: TYPE_BOX
+  texture: "main/bench"
+  id: "bench"
+  parent: "guibase"
+  layer: "layer1"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 198.0
+    y: 428.0
+  }
+  scale {
+    x: 8.0
+    y: 8.0
+  }
+  type: TYPE_BOX
+  texture: "seed bag/initial"
+  id: "seedbag"
+  parent: "guibase"
+  layer: "layer2"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -1.0
+    y: -0.5
+  }
+  size {
+    x: 7.0
+    y: 10.0
+  }
+  type: TYPE_BOX
+  id: "seedbag1"
+  parent: "seedbag"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+  visible: false
+}
+nodes {
+  position {
+    x: 1.0
+    y: -0.5
+  }
+  size {
+    x: 7.0
+    y: 8.0
+  }
+  type: TYPE_BOX
+  id: "seedbag2"
+  parent: "seedbag"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+  visible: false
+}
+nodes {
+  position {
+    y: 1.5
+  }
+  size {
+    x: 3.0
+    y: 8.0
+  }
+  type: TYPE_BOX
+  id: "seedbag3"
+  parent: "seedbag"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+  visible: false
+}
+layers {
+  name: "layer"
+}
+layers {
+  name: "layer1"
+}
+layers {
+  name: "layer2"
+}
+layers {
+  name: "layer3"
+}
+layers {
+  name: "layer4"
+}
+layers {
+  name: "layer5"
+}
+layers {
+  name: "layer6"
+}
+layers {
+  name: "layer7"
+}
+layers {
+  name: "layer8"
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT

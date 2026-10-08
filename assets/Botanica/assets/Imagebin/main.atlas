@@ -1,0 +1,19 @@
+images {
+  image: "/assets/images/background.png"
+}
+images {
+  image: "/assets/images/logo.png"
+}
+images {
+  image: "/builtins/graphics/particle_blob.png"
+}
+images {
+  image: "/assets/images/bookouteredge.png"
+}
+images {
+  image: "/assets/images/bookbutton.png"
+}
+images {
+  image: "/assets/images/settingsButton.png"
+}
+extrude_borders: 2

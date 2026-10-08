@@ -1,0 +1,7 @@
+function init(self)
+	--Yes it is this simple
+	go.set("#sprite", "tint.w", 0.5)
+	timer.delay(1, false, function()
+		go.delete("#sprite")
+	end)
+end

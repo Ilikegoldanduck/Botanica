@@ -1,0 +1,20 @@
+image: "/assets/images/saveandquit.png"
+tile_width: 53
+tile_height: 11
+collision_groups: "default"
+animations {
+  id: "clicked"
+  start_tile: 3
+  end_tile: 3
+}
+animations {
+  id: "hover"
+  start_tile: 2
+  end_tile: 2
+}
+animations {
+  id: "initial"
+  start_tile: 1
+  end_tile: 1
+}
+extrude_borders: 2

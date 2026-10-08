@@ -1,0 +1,12 @@
+{
+  "bob_arguments" : {
+    "sha1" : "402218d5544666871f07ecdfa21032a7fb59413f",
+    "version" : "1.12.4",
+    "timestamp" : "2026-05-04 09:07:33"
+  },
+  "defold_sdk" : "402218d5544666871f07ecdfa21032a7fb59413f",
+  "dependencies" : [ {
+    "link" : "https://github.com/subsoap/defos/archive/refs/tags/v2.8.7.zip",
+    "md5" : "EC956CA6EC64E97E1F1F59FA1C7A1486"
+  } ]
+}

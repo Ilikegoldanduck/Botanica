@@ -1,0 +1,41 @@
+local flowerInfo = require("scripts.flowerInfo")
+local mouseCheck = require("scripts.mouseCheck")
+
+local function split(s,delimiter)
+	delimiter = delimiter or '%s'
+	local t={}
+	local i=1
+	for str in string.gmatch(s, '([^'..delimiter..']+)') do
+		t[i] = str
+		i = i + 1
+	end
+	return t
+end
+
+function init(self)
+	msg.post(".", "acquire_input_focus")
+	defos.disable_window_resize()
+	defos.disable_maximize_button()
+	timer.delay(.1, false, function()
+		msg.post("@render:", "resize", { width = 960, height = 540 } )
+	end)
+	local file = io.open("assets/flowers.txt", "r")
+	if file then
+		for line in io.lines("assets/flowers.txt") do
+			-- Scan or process each line here
+			local flowerTable = split(line, "|")
+			flowerInfo.create(flowerTable[1], flowerTable[2], flowerTable[3], flowerTable[4] == "true")
+		end
+		io.close(file)
+	else
+		print("Failed to open file at: " .. "assets/flowers.txt")
+	end
+end
+
+function update(self, dt)
+	mouseCheck.reset()
+end
+
+function on_input(self, action_id, action)
+	
+end

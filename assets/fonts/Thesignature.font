@@ -1,0 +1,6 @@
+font: "/assets/fonts/Thesignature.ttf"
+material: "/builtins/fonts/font.material"
+size: 50
+outline_alpha: 1.0
+all_chars: true
+characters: " !\"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"

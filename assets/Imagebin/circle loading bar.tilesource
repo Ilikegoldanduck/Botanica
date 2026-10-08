@@ -1,0 +1,27 @@
+image: "/assets/images/circle loading bar.png"
+tile_width: 20
+tile_height: 4
+collision_groups: "default"
+animations {
+  id: "bottom"
+  start_tile: 40
+  end_tile: 78
+  playback: PLAYBACK_NONE
+}
+animations {
+  id: "temp1"
+  start_tile: 39
+  end_tile: 39
+}
+animations {
+  id: "temp2"
+  start_tile: 78
+  end_tile: 78
+}
+animations {
+  id: "top"
+  start_tile: 1
+  end_tile: 39
+  playback: PLAYBACK_NONE
+}
+extrude_borders: 2

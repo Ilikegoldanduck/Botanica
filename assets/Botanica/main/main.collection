@@ -1,0 +1,82 @@
+name: "main"
+scale_along_z: 0
+embedded_instances {
+  id: "background"
+  data: "components {\n"
+  "  id: \"main\"\n"
+  "  component: \"/scripts/main.script\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"background\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"default_animation: \\\"background\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "size {\\n"
+  "  x: 1920.0\\n"
+  "  y: 1080.0\\n"
+  "}\\n"
+  "size_mode: SIZE_MODE_MANUAL\\n"
+  "textures {\\n"
+  "  sampler: \\\"texture_sampler\\\"\\n"
+  "  texture: \\\"/assets/Imagebin/main.atlas\\\"\\n"
+  "}\\n"
+  "\"\n"
+  "  position {\n"
+  "    z: -0.5\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 960.0
+    y: 540.0
+  }
+}
+embedded_instances {
+  id: "camera"
+  data: "embedded_components {\n"
+  "  id: \"camera\"\n"
+  "  type: \"camera\"\n"
+  "  data: \"aspect_ratio: 1.0\\n"
+  "fov: 100.0\\n"
+  "near_z: -1.0\\n"
+  "far_z: 1.0\\n"
+  "orthographic_projection: 1\\n"
+  "orthographic_mode: ORTHO_MODE_AUTO_FIT\\n"
+  "\"\n"
+  "}\n"
+  ""
+  position {
+    x: 960.0
+    y: 540.0
+  }
+}
+embedded_instances {
+  id: "flower_factory"
+  data: "components {\n"
+  "  id: \"flowery\"\n"
+  "  component: \"/scripts/flowery.script\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"flfact\"\n"
+  "  type: \"factory\"\n"
+  "  data: \"prototype: \\\"/game_objects_and_gui/flower.go\\\"\\n"
+  "\"\n"
+  "}\n"
+  ""
+}
+embedded_instances {
+  id: "book"
+  data: "components {\n"
+  "  id: \"Herbbook\"\n"
+  "  component: \"/game_objects_and_gui/Herbbook.gui\"\n"
+  "}\n"
+  ""
+}
+embedded_instances {
+  id: "cursor"
+  data: "components {\n"
+  "  id: \"cursor\"\n"
+  "  component: \"/game_objects_and_gui/cursor.gui\"\n"
+  "}\n"
+  ""
+}
