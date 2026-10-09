@@ -45,4 +45,14 @@ function mouseCheck.getStored()
 	return {stored, stored_id}
 end
 
+local miscState = 0
+
+function mouseCheck.changeMisc(s)
+	miscState = s
+end
+
+function mouseCheck.getMisc()
+	return miscState
+end
+
 return mouseCheck

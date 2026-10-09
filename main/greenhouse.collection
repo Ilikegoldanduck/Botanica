@@ -28,25 +28,6 @@ embedded_instances {
   }
 }
 embedded_instances {
-  id: "camera"
-  data: "embedded_components {\n"
-  "  id: \"camera\"\n"
-  "  type: \"camera\"\n"
-  "  data: \"aspect_ratio: 1.0\\n"
-  "fov: 100.0\\n"
-  "near_z: -1.0\\n"
-  "far_z: 1.0\\n"
-  "orthographic_projection: 1\\n"
-  "orthographic_mode: ORTHO_MODE_AUTO_FIT\\n"
-  "\"\n"
-  "}\n"
-  ""
-  position {
-    x: 960.0
-    y: 540.0
-  }
-}
-embedded_instances {
   id: "pot1"
   data: "embedded_components {\n"
   "  id: \"sprite\"\n"
@@ -149,4 +130,18 @@ embedded_instances {
     x: 1157.3334
     y: 336.0
   }
+}
+embedded_instances {
+  id: "pothandler"
+  data: "components {\n"
+  "  id: \"potpotmix\"\n"
+  "  component: \"/scripts/greenhousespecifics/potpotmix.script\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"factory\"\n"
+  "  type: \"factory\"\n"
+  "  data: \"prototype: \\\"/game_objects_and_gui/flower.go\\\"\\n"
+  "\"\n"
+  "}\n"
+  ""
 }

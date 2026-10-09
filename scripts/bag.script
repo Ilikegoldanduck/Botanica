@@ -1,0 +1,16 @@
+--strictly visual script, no logic here
+local mouseCheck = require("scripts.mouseCheck")
+
+function init(self)
+	-- Add initialization code here
+	-- Learn more: https://defold.com/manuals/script/
+	-- Remove this function if not needed
+end
+
+function update(self, dt)
+	if mouseCheck.getMisc() == 1 then
+		go.set("#sprite", "cursor", 1/2)
+	else
+		go.set("#sprite", "cursor", 0/2)
+	end
+end

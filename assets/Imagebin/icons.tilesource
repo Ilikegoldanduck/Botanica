@@ -1,14 +1,14 @@
-image: "/assets/images/Bookie.png"
-tile_width: 255
-tile_height: 330
+image: "/assets/images/scene icons.png"
+tile_width: 9
+tile_height: 9
 collision_groups: "default"
 animations {
-  id: "anim"
+  id: "garden"
   start_tile: 1
   end_tile: 1
 }
 animations {
-  id: "anim2"
+  id: "greenhouse"
   start_tile: 2
   end_tile: 2
 }

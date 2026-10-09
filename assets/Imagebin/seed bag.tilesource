@@ -10,6 +10,8 @@ animations {
 animations {
   id: "initial"
   start_tile: 1
-  end_tile: 1
+  end_tile: 2
+  playback: PLAYBACK_NONE
+  fps: 0
 }
 extrude_borders: 2

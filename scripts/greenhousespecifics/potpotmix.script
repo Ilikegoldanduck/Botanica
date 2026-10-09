@@ -1,40 +1,11 @@
 local flowerInfo = require("scripts.flowerInfo")
 local mouseCheck = require("scripts.mouseCheck")
-local seasons = require("scripts.seasons")
-local scene = require("scripts.scene")
+local factory = "#factory"
 
-local function split(s, delimiter)
-	if s == nil then
-		return {nil}
-	end
-	delimiter = delimiter or '%s'
-	local t={}
-	local i=1
-	for str in string.gmatch(s, '([^'..delimiter..']+)') do
-		t[i] = str
-		i = i + 1
-	end
-	return t
-end
+local pots = {}
 
 function init(self)
-	defos.disable_window_resize()
-	defos.disable_maximize_button()
-	timer.delay(.1, false, function()
-		msg.post("@render:", "resize", { width = 960, height = 540 } )
-	end)
-	local file = sys.load_resource("/assets/flowers.txt")
-	flowerInfo.start()
-	if file then
-		for line in file:gmatch("([^\n]*)\n?") do
-			local flower = split(line, "|")
-			local conditionals = split(flower[5], ".")
-			flowerInfo.create(flower[1], flower[2], {flower[3], flower[4]}, conditionals)
-		end
-	else
-		pprint("failed to read file")
-	end
-	flowerInfo.sort()
+	
 end
 
 function final(self)
@@ -44,7 +15,9 @@ function final(self)
 end
 
 function update(self, dt)
-	go.set_position(vmath.vector3(960 + (1920 * (scene.get() - 1)), 540, 0), ".")
+	-- Add update code here
+	-- Learn more: https://defold.com/manuals/script/
+	-- Remove this function if not needed
 end
 
 function late_update(self, dt)
@@ -77,5 +50,11 @@ function on_input(self, action_id, action)
 	-- All mapped input bindings will be received. Mouse and touch input will
 	-- be received regardless of where on the screen it happened.
 	-- Learn more: https://defold.com/manuals/input/
+	-- Remove this function if not needed
+end
+
+function on_reload(self)
+	-- Add reload-handling code here
+	-- Learn more: https://defold.com/manuals/hot-reload/
 	-- Remove this function if not needed
 end

@@ -51,6 +51,10 @@ textures {
   name: "woah so sigma 2"
   texture: "/assets/Imagebin/woah so sigma 2.tilesource"
 }
+textures {
+  name: "icons"
+  texture: "/assets/Imagebin/icons.tilesource"
+}
 nodes {
   position {
     x: 2600.0
@@ -1970,6 +1974,28 @@ nodes {
   size_mode: SIZE_MODE_AUTO
 }
 nodes {
+  position {
+    x: 33.0
+    y: -53.0
+  }
+  size {
+    x: 44.0
+    y: 84.0
+  }
+  color {
+    x: 0.8
+    y: 0.8
+    z: 0.8
+  }
+  type: TYPE_BOX
+  id: "exterior"
+  pivot: PIVOT_NW
+  parent: "alamanc2"
+  layer: "layer6"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
   size {
     x: 1.0
     y: 1.0
@@ -2042,7 +2068,6 @@ nodes {
   layer: "layer8"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
-  visible: false
 }
 nodes {
   position {
@@ -2152,6 +2177,7 @@ nodes {
   layer: "layer1"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+  visible: false
 }
 nodes {
   position {
@@ -2169,6 +2195,7 @@ nodes {
   layer: "layer2"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+  visible: false
 }
 nodes {
   position {
@@ -2230,6 +2257,93 @@ nodes {
   id: "fog"
   parent: "guibase"
   layer: "layer3"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+  visible: false
+}
+nodes {
+  position {
+    x: -680.0
+    y: 540.0
+  }
+  size {
+    x: 1360.0
+    y: 1200.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_BOX
+  id: "Outerlayer3"
+  parent: "guibase"
+  layer: "layer8"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 960.0
+    y: 1080.0
+  }
+  size {
+    x: 2000.0
+    y: 1080.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_BOX
+  id: "transition"
+  pivot: PIVOT_S
+  parent: "guibase"
+  layer: "layer8"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_BOX
+  id: "iconfolder"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+  visible: false
+}
+nodes {
+  position {
+    x: 45.0
+    y: 45.0
+  }
+  scale {
+    x: 10.0
+    y: 10.0
+  }
+  type: TYPE_BOX
+  texture: "icons/garden"
+  id: "garden"
+  parent: "iconfolder"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 135.0
+    y: 45.0
+  }
+  scale {
+    x: 10.0
+    y: 10.0
+  }
+  type: TYPE_BOX
+  texture: "icons/greenhouse"
+  id: "greenhouse"
+  parent: "iconfolder"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
 }

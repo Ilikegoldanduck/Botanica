@@ -37,6 +37,7 @@ function flowerInfo.start()
 
 	unlockedTable = temp.unlocked or {}
 	gardenTable = temp.garden or {}
+	greenhouseTable = temp.greenhouse or {}
 	seasons.preset(temp.season or {1, 1, 1, 0})
 	local doubletemp = temp.time or os.time()
 	seasons.updateTime(os.time() - doubletemp)
@@ -159,5 +160,18 @@ end
 function flowerInfo.sendGarden()
 	return gardenTable
 end
+
+function flowerInfo.insertGreenhouse(f)
+	table.insert(greenhouseTable, f)
+end
+
+function flowerInfo.removeGreenhouse(i)
+	table.remove(greenhouseTable, i)
+end
+
+function flowerInfo.sendGreenhouse()
+	return greenhouseTable
+end
+
 
 return flowerInfo

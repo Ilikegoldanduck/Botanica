@@ -1,8 +1,0 @@
-Annual Lobelia|Lobelia erinus|to be implemented|true
-Snapdragon|Antirrhinum majus|to be implemented|false
-Dahlia|Dahlia pinnatas|to be implemented|false
-Cornflower|Centaurea cyanus|to be implemented|false
-Strawflower|Xerochrysum bracteatum|to be implemented|false
-Gerbera Daisy|Gerbera involucre|to be implemented|false
-Celosia|Celosia argentea var. cristata|to be implemented|false
-Sweet Allysum|Lobularia maritima|to be implemented|false
